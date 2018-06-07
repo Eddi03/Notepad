@@ -21,6 +21,7 @@
     <string name="dialog_btn_no">NO</string>
     <string name="dialog_eliminato">Eliminata!</string>
     <string name="toast_aggiornato">Aggiornata!</string>
+    <string name="dialog_btn_aggiorna">Aggiorna</string>
 
     <string name="hint_titolo">Titolo</string>
     <string name="hint_contenuto">Contenuto</string>

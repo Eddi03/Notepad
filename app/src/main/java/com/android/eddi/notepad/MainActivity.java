@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dbHelper = new DbHelper(this, getString(R.string.nome_db), null, 2);
+        dbHelper = new DbHelper(this, getString(R.string.nome_db), null, 3);
         dbHelper.queryData(getString(R.string.sql_query));
 
         dbHelper.getReadableDatabase();

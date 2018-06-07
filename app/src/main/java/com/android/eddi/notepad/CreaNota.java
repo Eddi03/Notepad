@@ -23,7 +23,7 @@ public class CreaNota extends AppCompatActivity {
 
         init();
 
-        dbHelper = new DbHelper(this, getString(R.string.nome_db), null, 2);
+        dbHelper = new DbHelper(this, getString(R.string.nome_db), null, 3);
         dbHelper.queryData(getString(R.string.sql_query));
 
         editTextTitolo = findViewById(R.id.editTextTitolo);

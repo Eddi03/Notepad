@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Notepad</string>
+
+    <!-- DATABASE -->
+    <string name="nome_db">Note</string>
+    <string name="sql_query">CREATE TABLE IF NOT EXISTS NOTE(Id INTEGER PRIMARY KEY AUTOINCREMENT, titolo VARCHAR, contenuto VARCHAR)</string>
+    <string name="sql_all_data">SELECT * FROM NOTE</string>
+    <string name="sql_column_titolo">titolo</string>
+    <string name="sql_column_contenuto">contenuto</string>
+    <string name="sql_id">SELECT id FROM NOTE</string>
+    <string name="sql_err">Errore DB</string>
+    <string name="sql_saved">Salvata!</string>
+    <string name="sql_not_saved">Nota non salvata</string>
+
+    <string name="dialog_title">Scegli</string>
+    <string name="dialog_modifica">Modifica</string>
+    <string name="dialog_elimina">Elimina</string>
+    <string name="dialog_elimina_title">Attenzione!</string>
+    <string name="dialog_elimina_msg">Vuoi davvero eliminarla?"</string>
+    <string name="dialog_btn_si">SI</string>
+    <string name="dialog_btn_no">NO</string>
+    <string name="dialog_eliminato">Eliminata!</string>
+    <string name="toast_aggiornato">Aggiornata!</string>
+
+    <string name="hint_titolo">Titolo</string>
+    <string name="hint_contenuto">Contenuto</string>
+</resources>

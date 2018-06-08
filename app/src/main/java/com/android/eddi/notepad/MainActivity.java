@@ -130,14 +130,14 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText editTextTitolo = dialog.findViewById(R.id.editTextUpTit);
         final EditText editTextContenuto = dialog.findViewById(R.id.editTextUpCon);
-        final Button buttonUpdate = dialog.findViewById(R.id.buttonUpdate);
+        final FloatingActionButton floatingActionButtonUpdate = dialog.findViewById(R.id.floatingActionButtonUpdate);
 
         int width = (int) (activity.getResources().getDisplayMetrics().widthPixels * 0.95);
         int height = (int) (activity.getResources().getDisplayMetrics().heightPixels * 0.7);
         dialog.getWindow().setLayout(width, height);
         dialog.show();
 
-        buttonUpdate.setOnClickListener(new View.OnClickListener() {
+        floatingActionButtonUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

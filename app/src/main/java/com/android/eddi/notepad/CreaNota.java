@@ -2,6 +2,7 @@ package com.android.eddi.notepad;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,6 +16,7 @@ public class CreaNota extends AppCompatActivity {
     EditText editTextContenuto;
     String titolo, contenuto;
     public static DbHelper dbHelper;
+    boolean twice = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,5 +68,24 @@ public class CreaNota extends AppCompatActivity {
             Toast.makeText(this, getString(R.string.sql_not_saved), Toast.LENGTH_SHORT).show();
         }
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if (twice == true){
+            Intent returnTOMain = new Intent(CreaNota.this, MainActivity.class);
+            startActivity(returnTOMain);
+            finish();
+        }
+        twice = true;
+        Toast.makeText(this, "Premi due volte per tornare indietro!", Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                twice = false;
+            }
+        }, 3000);
+        twice = true;
     }
 }

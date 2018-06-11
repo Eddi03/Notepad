@@ -28,8 +28,9 @@
             android:id="@+id/lista"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:dividerHeight="2sp"
-            android:divider="@color/dividerColor">
+            android:dividerHeight="2dp"
+            android:divider="@color/colorPrimary">
+
         </ListView>
 
     </LinearLayout>
@@ -65,4 +66,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="454dp" />
+
 </android.support.constraint.ConstraintLayout>

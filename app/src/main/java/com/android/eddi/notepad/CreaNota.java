@@ -52,7 +52,7 @@ public class CreaNota extends AppCompatActivity {
             titolo = editTextTitolo.getText().toString().trim().toUpperCase();
             contenuto = editTextContenuto.getText().toString().trim();
             try {
-                dbHelper.insertData(titolo, contenuto);
+                dbHelper.insertData("\n"+titolo, contenuto+"\n");
                 Toast.makeText(getApplicationContext(), getString(R.string.sql_saved), Toast.LENGTH_SHORT).show();
                 editTextTitolo.setText("");
                 editTextContenuto.setText("");

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.card_la);
 
         dbHelper = new DbHelper(this, getString(R.string.nome_db), null, 3);
         dbHelper.queryData(getString(R.string.sql_query));
@@ -142,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 try {
-                    dbHelper.updateData(editTextTitolo.getText().toString().trim().toUpperCase(), editTextContenuto.getText().toString().trim(), position);
+                    dbHelper.updateData("\n"+editTextTitolo.getText().toString().trim().toUpperCase(), editTextContenuto.getText().toString().trim()+"\n", position);
                     dialog.dismiss();
                     Toast.makeText(getApplicationContext(), getString(R.string.toast_aggiornato), Toast.LENGTH_SHORT).show();
                 } catch (Exception error) {
